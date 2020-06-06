@@ -165,6 +165,19 @@
       <div id="clientIP">::CLIENT_IP::</div>
     </div>
 
+    <script>
+      var rayID = document.getElementById("rayID").innerHTML;
+      var clientIP = document.getElementById("clientIP").innerHTML;
+      var errorReport = document.createElement("IMG");
+      errorReport.src = 'https://volley.artsy.net/cloudflareError.png?cloudflareErrorType=500&rayID=' + rayID + '&clientIP=' + clientIP;
+      document.getElementById("error").appendChild(errorReport);
+    </script>
+
+    <script>
+      document.getElementById(
+        "copyright-date"
+      ).innerHTML = new Date().getFullYear();
+    </script>
 
   </body>
 </html>
